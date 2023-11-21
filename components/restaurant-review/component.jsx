@@ -1,5 +1,9 @@
-const RestaurantReviews = ({reviews}) => {
-    return <li>{reviews}</li>
+const RestaurantReview = ({reviews}) => {
+    return (
+        <div>
+            <div>{reviews.text}</div>
+        </div>
+    )
 }
 
-export default RestaurantReviews
+export default RestaurantReview

@@ -1,4 +1,4 @@
-import RestaurantsPage from "../pages/restaurant-page/components"
+import RestaurantsPage from "../pages/restaurants-page/components"
 
 const App = ({restaurants}) => {
     return <RestaurantsPage restaurants = {restaurants}/>
