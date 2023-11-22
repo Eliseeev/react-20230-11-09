@@ -1,5 +1,6 @@
 import RestaurantMenu from "../restaurant-menu/component"
 import RestaurantReviews from "../restaurant-reviews/components"
+import { useState } from "react"
 
 const Restaurant = ({restaurant}) => {
     return <div>
