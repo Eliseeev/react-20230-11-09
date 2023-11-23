@@ -4,7 +4,7 @@ const RestaurantsTabs = ({restaurants, onTabClick}) => {
 
     return (
     <div>
-        {restaurants.map(({name, index}) => (
+        {restaurants.map(({name}, index) => (
         <RestaurantTab onClick = {() => onTabClick(name)}>
         {name}
         </RestaurantTab>
