@@ -1,37 +1,40 @@
 import {useState, useReducer} from "react"
 import Counter from "../counter/component";
 
+
+const DEFAULT_FORM_VALUES = {
+    name: '',
+    text: '',
+    rating: 1,
+}
+
+function reducer(state, action){
+    switch(action.type){
+        case 'setName': return {...state, name: action.data, 
+            text: DEFAULT_FORM_VALUES.text,
+            rating: DEFAULT_FORM_VALUES.rating
+            }
+        case 'setText': return {...state, text: action.data}
+        case 'setRating': return {...state, rating: action.data}
+        default: {
+            return state
+        }
+    }
+}
+
 const ReviewForm = () => {
 
-    const DEFAULT_FORM_VALUES = {
-        name: '',
-        text: '',
-    }
-
-    function reducer(state, action){
-        switch(action.type){
-            case 'setName': return {...state, name: action.data, 
-                text: DEFAULT_FORM_VALUES.text,
-                }
-            case 'setText': return {...state, text: action.data}
-            default: {
-                return state
-            }
-        }
-    }
-
-    const [restaurantRating, setRestaurantRating] = useState(0);
     const [formValues, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUES)
- 
-    const addValue = () => {
-        if(restaurantRating < 5) {
-            setRestaurantRating(restaurantRating + 0.5)
-        }
-    }
 
     const substractValue = () => {
-        if(restaurantRating > 1){
-            setRestaurantRating(restaurantRating - 0.5)
+        if(formValues.rating > 1){
+            dispatch({type: 'setRating', data: formValues.rating - 0.5})
+        }
+    }
+
+    const addValue = () => {
+        if(formValues.rating < 5) {
+            dispatch({type: 'setRating', data: formValues.rating + 0.5})
         }
     }
     
@@ -50,7 +53,7 @@ const ReviewForm = () => {
             </div>
             <div>
                 <label>Rating</label>
-                <Counter value = {restaurantRating} addValue = {addValue} substractValue = {substractValue}/>
+                <Counter value = {formValues.rating} addValue = {addValue} substractValue = {substractValue}/>
             </div>
         </div>
     )
