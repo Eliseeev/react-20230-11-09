@@ -1,6 +1,6 @@
-import {useState, useReducer} from "react"
+import {useReducer} from "react"
 import Counter from "../counter/component";
-
+import styles from './styles.module.css'
 
 const DEFAULT_FORM_VALUES = {
     name: '',
@@ -41,18 +41,21 @@ const ReviewForm = () => {
     return (
         <div>
             <div>
-                <h3>Restaurant rating</h3>
-                <label name = 'name'>Name</label>
+                <div className = {styles.ratingBorder}></div>
+                <h3 className = {styles.restaurantRating}>Restaurant <span className ={styles.ratingAttribute}>rating</span></h3>
+                <label name = 'name' className = {styles.formUser}>Name</label>
                 <input  id = 'name' type ='text' value = {formValues.name}
+                className = {styles.name}
                 onChange = {(event) => dispatch({type: 'setName', data: event.target.value})}></input>
             </div>
             <div>
-                <label name = 'name'>Text</label>
+                <label name = 'name' className = {styles.formUser}>Text</label>
                 <input  id = 'text' type ='text' value = {formValues.text}
+                className = {styles.text}
                  onChange = {(event) => dispatch({type: 'setText', data: event.target.value})}></input>
             </div>
             <div>
-                <label>Rating</label>
+                <label className = {styles.formUser}>Rating</label>
                 <Counter value = {formValues.rating} addValue = {addValue} substractValue = {substractValue}/>
             </div>
         </div>

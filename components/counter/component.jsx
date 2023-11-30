@@ -1,10 +1,12 @@
+import styles from './styles.module.css'
+
 const Counter = ({value, addValue, substractValue}) => {
     
     return  (
     <div>
-        <button onClick = {substractValue}>-</button>
+        <button className = {styles.btnClick} onClick = {substractValue}>-</button>
         {value}
-        <button onClick = {addValue}>+</button>
+        <button className = {styles.btnClick} onClick = {addValue}>+</button>
     </div>)
 }
 
