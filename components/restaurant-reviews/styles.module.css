@@ -2,17 +2,12 @@
     border-bottom: 1px solid rgb(145, 145, 145);
 }
 
-.redAttribute{
-    background-color: #b61616;
-    height: 30px;
-    width: 20px;
-}
-
-.fistLetterReview{
-    color: aliceblue;
-}
-
 .reviewsName{
     color:black;
     font-size: 30px;
+}
+
+.wrapText {
+   display: inline;
+   margin-top: 500px;
 }

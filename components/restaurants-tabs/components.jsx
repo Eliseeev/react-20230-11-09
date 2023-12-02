@@ -6,7 +6,7 @@ const RestaurantsTabs = ({restaurants, onTabClick}) => {
     <div>
         {restaurants.map(({name}, index) => (
         <RestaurantTab onClick = {() => onTabClick(name)}>
-        {name}
+            {name}
         </RestaurantTab>
         ))}
     </div>)

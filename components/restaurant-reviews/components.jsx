@@ -5,7 +5,7 @@ const RestaurantReviews = ({reviews}) => {
     return (
         <div>
             <div className = {styles.border}></div>
-            <h3 className = {styles.reviewsName}><div className = {styles.redAttribute}><span className={styles.fistLetterReview}>R</span>views</div></h3>
+            <h3 className = {styles.reviewsName}>Feedback from our customers</h3>
             {reviews.map((review) => (
             <RestaurantReview reviews = {review}/>
             ))}

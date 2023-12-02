@@ -39,10 +39,10 @@ const ReviewForm = () => {
     }
     
     return (
-        <div>
+        <div className = {styles.parent}>
             <div>
                 <div className = {styles.ratingBorder}></div>
-                <h3 className = {styles.restaurantRating}>Restaurant <span className ={styles.ratingAttribute}>rating</span></h3>
+                <h3 className = {styles.restaurantRating}>Please leave your feedback</h3>
                 <label name = 'name' className = {styles.formUser}>Name</label>
                 <input  id = 'name' type ='text' value = {formValues.name}
                 className = {styles.name}
@@ -55,7 +55,7 @@ const ReviewForm = () => {
                  onChange = {(event) => dispatch({type: 'setText', data: event.target.value})}></input>
             </div>
             <div>
-                <label className = {styles.formUser}>Rating</label>
+                <label>Rate us</label>
                 <Counter value = {formValues.rating} addValue = {addValue} substractValue = {substractValue}/>
             </div>
         </div>

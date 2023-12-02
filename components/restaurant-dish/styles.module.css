@@ -11,7 +11,8 @@
 
 .dishesBorder{
      margin-top: 15px;
-     width: 100px;
+     width: 200px;
      height: 2px;
      background-color: #841a1a;
+     display: inline-block;
 }
