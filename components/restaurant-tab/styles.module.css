@@ -9,6 +9,7 @@
     height: 44px;
     text-align: center;
     font-family: 'Raleway', sans-serif;
+    cursor: pointer;
 }
 
 .btnTab:focus{
