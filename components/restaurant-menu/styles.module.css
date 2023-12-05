@@ -7,3 +7,17 @@
 .fistLetter{
     color: aliceblue;
 }
+
+.positionOfDishes{
+    margin: 20px;
+}
+
+.positionOfDishName{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.positionOfDishesBorder{
+    margin-top: 15px;
+    display: inline-block;
+}

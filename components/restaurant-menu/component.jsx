@@ -6,7 +6,8 @@ const RestaurantMenu = ({dishes}) => {
         <div>
             <h3 className = {styles.restaurantMenuHeader}>Menu</h3>
             {dishes.map((dish) => (
-            <RestaurantDish dishes = {dish}/>
+            <RestaurantDish dishes = {dish} positionOfDishes = {styles.positionOfDishes}
+            positionOfDishName = {styles.positionOfDishName} positionOfDishesBorder = {styles.positionOfDishesBorder}/>
             ))}
         </div>
     )

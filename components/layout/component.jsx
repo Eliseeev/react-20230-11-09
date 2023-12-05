@@ -4,7 +4,7 @@ import styles from './styles.module.css'
 
 const Layout = ({children}) => {
     return <div>
-        <Header className = {styles.header} children={children}/>
+        <Header className = {styles.headerPosition} children={children}/>
         <Footer/>
     </div>
 }
