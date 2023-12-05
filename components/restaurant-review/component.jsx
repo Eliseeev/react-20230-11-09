@@ -1,7 +1,9 @@
+import styles from './styles.module.css'
+
 const RestaurantReview = ({reviews}) => {
     return (
         <div>
-            <div>{reviews.text}</div>
+            <div className = {styles.reviewText}>{reviews.text}</div>
         </div>
     )
 }

@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+.btnTab {
+    background-color: #f9f8f8;
+    border: none;
+    color: rgb(45, 45, 45);
+    font-size: 12px;
+    width: 120px;
+    height: 44px;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btnTab:focus{
+    color: gray;
+}
+

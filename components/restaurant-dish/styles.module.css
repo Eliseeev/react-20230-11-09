@@ -1,0 +1,10 @@
+.nameDish{
+   color: #252424;
+   font-size: 15px;
+}
+
+.dishesBorder{
+     width: 200px;
+     height: 2px;
+     background-color: #841a1a;
+}

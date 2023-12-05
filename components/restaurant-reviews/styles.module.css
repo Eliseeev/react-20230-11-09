@@ -1,0 +1,13 @@
+.border {
+    border-bottom: 1px solid rgb(145, 145, 145);
+}
+
+.reviewsName{
+    color:black;
+    font-size: 30px;
+}
+
+.wrapText {
+   display: inline;
+   margin-top: 500px;
+}

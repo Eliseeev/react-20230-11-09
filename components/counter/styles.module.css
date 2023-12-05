@@ -1,0 +1,9 @@
+.btnClick {
+    border: none;
+    margin: 5px;
+    font-size: 18px;
+}
+
+.btnClick:hover {
+    color: rgb(250, 250, 250)
+}
