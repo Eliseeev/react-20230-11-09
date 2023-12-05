@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import RestaurantTab from '../restaurant-tab/component'
 
 
-const Header = ({className, children}) => {
+const Header = ({children, className}) => {
     return <div className = {classNames(styles.root, className)}>{children}</div>
 }
 

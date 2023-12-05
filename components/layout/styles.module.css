@@ -4,7 +4,7 @@
     height: 100%;
 }
 
-.headPosition {
-    margin-top: 20px;
-    position: relative;
+.headerPosition {
+    position: sticky;
+    top: 0;
 }
