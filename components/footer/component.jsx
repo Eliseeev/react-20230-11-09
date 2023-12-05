@@ -1,7 +1,8 @@
 import styles from './styles.module.css'
+import classNames from 'classnames'
 
-const Footer = ({children}) => {
-    return <div className = {styles.root}>{children}</div>
+const Footer = ({children, className}) => {
+    return <div className = {classNames(styles.root, className)}>{children}</div>
 }
 
 export default Footer

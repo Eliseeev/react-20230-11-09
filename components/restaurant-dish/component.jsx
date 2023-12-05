@@ -1,8 +1,10 @@
 import { useState } from "react"
 import Counter from "../counter/component";
-import styles from "./styles.module.css"
+import styles from "./styles.module.css";
+import classNames from "classnames";
 
-const RestaurantDish = ({dishes}) => {
+const RestaurantDish = ({dishes, positionNameOfDish, positionOfDishes, positionOfDishBorder}) => {
+
     const [numberOfDishes, setNumberOfDishes] = useState(0);
 
     const addValue = () => {
@@ -18,11 +20,11 @@ const RestaurantDish = ({dishes}) => {
     }
    
     return (
-            <div className = {styles.dishes}>
-                <div className = {styles.nameDish}>{dishes.name}</div>
+            <div className = {classNames(styles.dishes, positionOfDishes)}>
+                <div className = {classNames(styles.nameDish, positionNameOfDish)}>{dishes.name}</div>
                 <Counter addValue={addValue} substractValue={substractValue}
                 value = {numberOfDishes}/>
-                <div className = {styles.dishesBorder}></div>
+                <div className = {classNames(styles.dishesBorder, positionOfDishBorder)}></div>
             </div>
     )
 }

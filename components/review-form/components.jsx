@@ -26,13 +26,13 @@ const ReviewForm = () => {
 
     const [formValues, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUES)
 
-    const substractValue = () => {
+    const substractValueRating = () => {
         if(formValues.rating > 1){
             dispatch({type: 'setRating', data: formValues.rating - 0.5})
         }
     }
 
-    const addValue = () => {
+    const addValueRating = () => {
         if(formValues.rating < 5) {
             dispatch({type: 'setRating', data: formValues.rating + 0.5})
         }
@@ -56,7 +56,7 @@ const ReviewForm = () => {
             </div>
             <div>
                 <label>Rate us</label>
-                <Counter value = {formValues.rating} addValue = {addValue} substractValue = {substractValue}/>
+                <Counter value = {formValues.rating} addValueRating = {addValueRating} substractValueRating = {substractValueRating}/>
             </div>
         </div>
     )

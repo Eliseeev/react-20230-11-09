@@ -1,18 +1,10 @@
 .nameDish{
    color: #252424;
    font-size: 15px;
-   margin-top: 10px;
-   margin-bottom: 10px;
-}
-
-.dishes {
-    margin: 20px;
 }
 
 .dishesBorder{
-     margin-top: 15px;
      width: 200px;
      height: 2px;
      background-color: #841a1a;
-     display: inline-block;
 }

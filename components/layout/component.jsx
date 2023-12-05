@@ -1,12 +1,12 @@
-// import Footer from "../footer/component"
-// import Header from "../header/component"
-// import styles from './styles.module.css'
+import Footer from "../footer/component"
+import Header from "../header/component"
+import styles from './styles.module.css'
 
-// const Layout = ({children}) => {
-//     return <div>
-//         <Header className = {styles.header} children={children}/>
-//         <Footer/>
-//     </div>
-// }
+const Layout = ({children}) => {
+    return <div>
+        <Header className = {styles.header} children={children}/>
+        <Footer className = {styles.headPosition}/>
+    </div>
+}
 
-// export default Layout
+export default Layout
