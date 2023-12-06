@@ -1,18 +1,13 @@
 import styles from './styles.module.css'
-import { useContext } from 'react'
-import { ContextTheme } from '../context-theme/component'
+import { Button } from '../btn-change-theme/component'
 
 const Counter = ({value, addValue, substractValue}) => {
 
-    const [newTheme, setNewTheme] = useContext(ContextTheme)
-
     return  (
         <div>
-            <button className = {`${styles.btnClick} ${(newTheme === 'newButtonStyle') ? 
-            `${styles.newButtonStyle} ${styles.addModeForm}` : null}`} onClick = {substractValue}>-</button>
+            <Button className = {styles.btnClick} onClick = {substractValue}>-</Button>
             {value}
-            <button className = {`${styles.btnClick} ${(newTheme === 'newButtonStyle') ? 
-            styles.newButtonStyle : null}`} onClick = {addValue}>+</button>
+            <Button className = {styles.btnClick} onClick = {addValue}>+</Button>
         </div>
     )
 }

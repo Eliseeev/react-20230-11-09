@@ -1,7 +1,8 @@
 import styles from './styles.module.css'
+import { Button } from '../btn-change-theme/component'
 
 const RestaurantTab = ({children, onClick}) => {
-    return  <button className = {styles.btnTab} onClick = {onClick}>{children}</button>         
+    return  <Button className = {styles.btnTab} onClick = {onClick}>{children}</Button>         
 }
 
 export default RestaurantTab
