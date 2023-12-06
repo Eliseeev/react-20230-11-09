@@ -3,8 +3,8 @@ import Counter from "../counter/component";
 import styles from "./styles.module.css";
 import classNames from "classnames";
 
-const RestaurantDish = ({dishes, positionNameOfDish, positionOfDishes, positionOfDishBorder}) => {
 
+const RestaurantDish = ({dishes, positionOfDishes, positionOfDishName, positionOfDishesBorder}) => {
     const [numberOfDishes, setNumberOfDishes] = useState(0);
 
     const addValue = () => {
@@ -21,10 +21,11 @@ const RestaurantDish = ({dishes, positionNameOfDish, positionOfDishes, positionO
    
     return (
             <div className = {classNames(styles.dishes, positionOfDishes)}>
-                <div className = {classNames(styles.nameDish, positionNameOfDish)}>{dishes.name}</div>
+
+                <div className = {classNames(styles.nameDish, positionOfDishName)}>{dishes.name}</div>
                 <Counter addValue={addValue} substractValue={substractValue}
                 value = {numberOfDishes}/>
-                <div className = {classNames(styles.dishesBorder, positionOfDishBorder)}></div>
+                <div className = {classNames(styles.dishesBorder, positionOfDishesBorder)}></div>
             </div>
     )
 }
