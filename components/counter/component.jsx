@@ -1,13 +1,15 @@
 import styles from './styles.module.css'
+import { Button } from '../btn-change-theme/component'
 
 const Counter = ({value, addValue, substractValue}) => {
-    
+
     return  (
-    <div>
-        <button className = {styles.btnClick} onClick = {substractValue}>-</button>
-        {value}
-        <button className = {styles.btnClick} onClick = {addValue}>+</button>
-    </div>)
+        <div>
+            <Button className = {styles.btnClick} onClick = {substractValue}>-</Button>
+            {value}
+            <Button className = {styles.btnClick} onClick = {addValue}>+</Button>
+        </div>
+    )
 }
 
 export default Counter

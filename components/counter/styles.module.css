@@ -2,8 +2,19 @@
     border: none;
     margin: 5px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .btnClick:hover {
     color: rgb(250, 250, 250)
+}
+
+.newButtonStyle {
+    background-color: rgb(134, 164, 150);
+    color: white;
+    border-radius: 20px;
+}
+
+.addModeForm {
+    width: 22px
 }

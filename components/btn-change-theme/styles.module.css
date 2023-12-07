@@ -1,0 +1,23 @@
+.light {
+   background-color: #fff;
+    color: rgb(28, 28, 28)
+}
+
+.light, .dark {
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dark {
+    background-color: rgb(58, 88, 85);
+    color: rgb(255, 255, 255);
+}
+
+.dark:focus, .light:focus {
+    opacity: 0.5;
+}

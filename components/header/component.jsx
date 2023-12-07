@@ -1,10 +1,21 @@
+import { Button } from '../btn-change-theme/component';
+import ProviderTheme from '../context-theme/component';
+import { useTheme } from '../context-theme/hook';
 import styles from './styles.module.css'
-import classNames from 'classnames'
-import RestaurantTab from '../restaurant-tab/component'
+import classNames from 'classnames';
 
 
-const Header = ({children, className}) => {
-    return <div className = {classNames(styles.root, className)}>{children}</div>
+const Header = ({className}) => {
+    const {switchTheme} = useTheme()
+
+    return (
+        <div className = {classNames(styles.root, className)}>
+            <ProviderTheme>
+                <Button onClick={switchTheme}>Change theme</Button>
+                <button className = {styles.orderBtn}>Order</button>
+            </ProviderTheme>
+        </div>
+    )
 }
 
 export default Header
