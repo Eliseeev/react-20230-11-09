@@ -1,8 +1,12 @@
-import RestaurantsPage from "../pages/restaurants-page/components"
-import './styles/index.css'
+import { Provider } from "react-redux";
+import RestaurantsPage from "../pages/restaurants-page/components";
+import store from "../redux";
 
 const App = ({restaurants}) => {
-    return <RestaurantsPage restaurants = {restaurants}/>
+
+    return <Provider store = {store}>
+        <RestaurantsPage restaurants = {restaurants}/>
+    </Provider>
 }
 
 export default App

@@ -1,10 +1,15 @@
+import { useSelector } from "react-redux";
 import RestaurantMenu from "../restaurant-menu/component"
 import RestaurantReviews from "../restaurant-reviews/components"
 import ReviewForm from "../review-form/components";
 import styles from "./styles.module.css"
+import { selectRestaurantById } from "../../redux/features/entities/restaurant/selectors";
 
-const Restaurant = ({restaurant}) => {
-
+const Restaurant = ({id}) => {
+    if(!id) return null
+    
+    const restaurant = useSelector((state) => selectRestaurantById(state, Object.values(id)[0]))
+    
     if (!restaurant) {
         return null;
     }
