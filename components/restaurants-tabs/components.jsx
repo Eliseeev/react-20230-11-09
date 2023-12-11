@@ -8,8 +8,8 @@ const RestaurantsTabs = ({ onTabClick }) => {
 
     return (
     <div>
-        {Object.values(restaurants).map(({name}) => (
-        <RestaurantTab onClick = {() => onTabClick(name)}>
+        {Object.values(restaurants).map(({name, id}) => (
+        <RestaurantTab onClick = {() => onTabClick(id)}>
             {name}
         </RestaurantTab>
         ))}

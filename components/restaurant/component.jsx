@@ -5,10 +5,10 @@ import ReviewForm from "../review-form/components";
 import styles from "./styles.module.css"
 import { selectRestaurantById } from "../../redux/features/entities/restaurant/selectors";
 
-const Restaurant = ({id}) => {
-    if(!id) return null
+const Restaurant = ({restaurantId}) => {
+    if(!restaurantId) return null
     
-    const restaurant = useSelector((state) => selectRestaurantById(state, Object.values(id)[0]))
+    const restaurant = useSelector((state) => selectRestaurantById(state, restaurantId))
     
     if (!restaurant) {
         return null;

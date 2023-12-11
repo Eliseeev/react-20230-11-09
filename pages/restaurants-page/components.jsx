@@ -8,18 +8,13 @@ import { selectRestaurants } from "../../redux/features/entities/restaurant/sele
 
 
 const RestaurantsPage = () => {
-    const [selectedRestaurantName, setSelectedRestaurant] = useState();
-
-    const restaurants = useSelector((state) => selectRestaurants(state))
- 
-    const id = Object.values(restaurants).find(({name}) => name === selectedRestaurantName);
-  
-
+    const [selectedRestaurantId, setSelectedRestaurant] = useState(0);
+    
     return (
     <div className= {styles.mainPage}>
             <Layout>
                 <RestaurantsTabs onTabClick = {setSelectedRestaurant}/>
-                <Restaurant id = {id}/>
+                <Restaurant restaurantId = {selectedRestaurantId}/>
            </Layout>
     </div>
     )
