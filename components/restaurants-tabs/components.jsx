@@ -1,11 +1,15 @@
+import { useSelector } from "react-redux"
 import RestaurantTab from "../restaurant-tab/component"
+import { selectRestaurants } from "../../redux/features/entities/restaurant/selectors"
 
-const RestaurantsTabs = ({restaurants, onTabClick}) => {
+
+const RestaurantsTabs = ({ onTabClick }) => {
+    const restaurants = useSelector(selectRestaurants)
 
     return (
     <div>
-        {restaurants.map(({name}, index) => (
-        <RestaurantTab onClick = {() => onTabClick(name)}>
+        {Object.values(restaurants).map(({name, id}) => (
+        <RestaurantTab onClick = {() => onTabClick(id)}>
             {name}
         </RestaurantTab>
         ))}
