@@ -1,11 +1,10 @@
 import { Provider } from "react-redux";
-import RestaurantsPage from "../pages/restaurants-page/components";
 import store from "../redux";
+import { RestaurantsPageContainer } from "../pages/restaurants-page/container";
 
-const App = ({restaurants}) => {
-
+const App = () => {
     return <Provider store = {store}>
-        <RestaurantsPage restaurants = {restaurants}/>
+        <RestaurantsPageContainer/>
     </Provider>
 }
 

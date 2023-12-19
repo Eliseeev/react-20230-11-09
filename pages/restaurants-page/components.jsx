@@ -1,10 +1,9 @@
 import RestaurantsTabs from "../../components/restaurants-tabs/components"
 import { useState } from "react"
-import Restaurant from "../../components/restaurant/component"
 import styles from '/pages/restaurants-page/styles.module.css'
 import Layout from "../../components/layout/component"
-import { useSelector } from "react-redux"
-import { selectRestaurants } from "../../redux/features/entities/restaurant/selectors"
+import { RestaurantContainer } from "../../components/restaurant/container"
+
 
 
 const RestaurantsPage = () => {
@@ -14,7 +13,7 @@ const RestaurantsPage = () => {
     <div className= {styles.mainPage}>
             <Layout>
                 <RestaurantsTabs onTabClick = {setSelectedRestaurant}/>
-                <Restaurant restaurantId = {selectedRestaurantId}/>
+                <RestaurantContainer restaurantId = {selectedRestaurantId}/>
            </Layout>
     </div>
     )

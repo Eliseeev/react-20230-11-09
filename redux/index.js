@@ -1,15 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userSlice from "./features/entities/users";
 import { restaurantSlice } from "./features/entities/restaurant";
-import dishesSlice from "./features/entities/dishes";
-import reviewSlice from "./features/entities/reviews";
+import { dishSlice } from "./features/entities/dish";
+import { reviewsSlice } from "./features/entities/reviews";
+import { usersSlice } from "./features/entities/users";
 
 const store = configureStore({
     reducer: {
-        user: userSlice.reducer,
-        review: reviewSlice.reducer,
+        user: usersSlice.reducer,
+        review: reviewsSlice.reducer,
         restaurant: restaurantSlice.reducer,
-        dish: dishesSlice.reducer,
+        dish: dishSlice.reducer,
     },
 })
 
