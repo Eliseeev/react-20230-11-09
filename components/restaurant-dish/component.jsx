@@ -2,15 +2,15 @@ import { useState } from "react"
 import Counter from "../counter/component";
 import styles from "./styles.module.css";
 import classNames from "classnames";
-import { useSelector } from "react-redux";
-import { selectDishById } from "../../redux/features/entities/dishes/selectors";
 
 
-const RestaurantDish = ({id, positionOfDishes, positionOfDishName, positionOfDishesBorder}) => {
-
-   const dish = useSelector((state) => selectDishById(state, id))
+const RestaurantDish = ({dish, positionOfDishes, positionOfDishName, positionOfDishesBorder}) => {
 
     const [numberOfDishes, setNumberOfDishes] = useState(0);
+
+     if(!dish) {
+        return null;
+      }
 
     const addValue = () => {
         if(numberOfDishes < 5) {
