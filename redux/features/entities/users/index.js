@@ -1,16 +1,23 @@
-import { normalizedUsers } from "../../../../constans/mock-norm";
 import { createSlice } from "@reduxjs/toolkit";
+import { getUsers } from "./thunk/get-users";
 
-const userSlice = createSlice({
-    name: 'user', 
-    initialState: {
-        entities: normalizedUsers.reduce((acc, user) => {
-            acc[user.id] = user
-            
-            return acc
-        }, {}),
-        ids: normalizedUsers.map(({id}) => id)
-    }
-})
+export const usersSlice = createSlice({
+    name: 'restaurant',
+    initialState: { entities: {}, ids: [], status: "idle"},
+    extraReducers: (builder) => builder
+    .addCase(getUsers.pending, (state) => {
+      state.status = 'pending'
+    })
+    .addCase(getUsers.fulfilled, (state, {payload}) => {
+      state.entities = payload.reduce((acc, user) => {
+        acc[user.id] = user;
+        return acc;
+      }, {});
+      state.ids = payload.map(({id}) => id);
+      state.status = 'fulfilled'
+    })
+    .addCase(getUsers.rejected, (state) => {
+      state.status = 'rejected'
+    }),
+  });
 
-export default userSlice
