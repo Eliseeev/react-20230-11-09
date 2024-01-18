@@ -23,12 +23,13 @@ const RestaurantDish = ({dish, positionOfDishes, positionOfDishName, positionOfD
             setNumberOfDishes(numberOfDishes - 1)
         }
     }
+
    
     return (
             <div className = {classNames(styles.dishes, positionOfDishes)}>
 
                 <div className = {classNames(styles.nameDish, positionOfDishName)}>{dish.name}</div>
-                <Counter addValue={addValue} substractValue={substractValue}
+                <Counter addValueRating = {addValue} substractValueRating = {substractValue}
                 value = {numberOfDishes}/>
                 <div className = {classNames(styles.dishesBorder, positionOfDishesBorder)}></div>
             </div>

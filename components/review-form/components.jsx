@@ -1,6 +1,7 @@
 import {useReducer} from "react"
 import Counter from "../counter/component";
 import styles from './styles.module.css'
+import { Button } from "../btn-change-theme/component";
 
 const DEFAULT_FORM_VALUES = {
     name: '',
@@ -22,10 +23,11 @@ function reducer(state, action){
     }
 }
 
-const ReviewForm = () => {
+const ReviewForm = ({initialState = DEFAULT_FORM_VALUES, onSave}) => {
 
-    const [formValues, dispatch] = useReducer(reducer, DEFAULT_FORM_VALUES)
+    const [formValues, dispatch] = useReducer(reducer, initialState)
 
+    
     const substractValueRating = () => {
         if(formValues.rating > 1){
             dispatch({type: 'setRating', data: formValues.rating - 0.5})
@@ -50,11 +52,14 @@ const ReviewForm = () => {
             </div>
             <div>
                 <label name = 'name' className = {styles.formUser}>Text</label>
-                <input  id = 'text' type ='text' value = {formValues.text}
+                <textarea  id = 'text' type ='text' value = {formValues.text} rows="5" cols="33"
                 className = {styles.text}
-                 onChange = {(event) => dispatch({type: 'setText', data: event.target.value})}></input>
+                 onChange = {(event) => dispatch({type: 'setText', data: event.target.value})}></textarea>
             </div>
             <div>
+                <div>
+                    <Button onClick = {() => onSave?.(formValues)} className = {styles.submit}>Save</Button> 
+                </div>
                 <label>Rate us</label>
                 <Counter value = {formValues.rating} addValueRating = {addValueRating} substractValueRating = {substractValueRating}/>
             </div>

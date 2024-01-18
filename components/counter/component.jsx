@@ -1,13 +1,13 @@
 import styles from './styles.module.css'
 import { Button } from '../btn-change-theme/component'
 
-const Counter = ({value, addValue, substractValue}) => {
+const Counter = ({value, addValueRating, substractValueRating}) => {
 
     return  (
         <div>
-            <Button className = {styles.btnClick} onClick = {substractValue}>-</Button>
+            <Button className = {styles.btnClick} onClick = {substractValueRating}>-</Button>
             {value}
-            <Button className = {styles.btnClick} onClick = {addValue}>+</Button>
+            <Button className = {styles.btnClick} onClick = {addValueRating}>+</Button>
         </div>
     )
 }

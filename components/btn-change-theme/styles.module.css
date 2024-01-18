@@ -1,5 +1,5 @@
 .light {
-   background-color: #fff;
+   background-color: #f9f9f9;
     color: rgb(28, 28, 28)
 }
 
@@ -8,7 +8,7 @@
     margin: 5px;
     cursor: pointer;
     font-family: 'Raleway', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
     text-align: center;
     margin-top: 20px;
 }

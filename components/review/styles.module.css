@@ -1,0 +1,18 @@
+.review {
+   margin: 20px;
+   border-radius: 20px;
+   background-color: rgb(237, 237, 237);
+   padding: 40px;
+   width: 50%;
+   margin: 0 auto;
+}
+
+.user {
+   margin-top: 20px;
+   display: flex;
+   margin-left: 16%;
+}
+
+.block{
+   width: 200px;
+}
