@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Rubik+Burned&display=swap');
+
 .root {
-    height: 44px;
+    height: 60px;
     background-color: #f9f8f8;
     position: sticky;
     top: 0;
@@ -9,7 +11,7 @@
     background-color: #f9f8f8;
     border: none;
     color: rgb(45, 45, 45);
-    font-size: 12px;
+    font-size: 15px;
     width: 120px;
     height: 44px;
     text-align: center;
@@ -18,4 +20,13 @@
     left: 0;
     margin-left: 30vh;
     cursor: pointer;
+}
+
+.mainLogo {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    left: 30px;
+    color: rgb(50, 60, 56);
+    font-family: 'Caveat', cursive;
 }

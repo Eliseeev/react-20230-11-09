@@ -12,7 +12,10 @@ const Header = ({className}) => {
         <div className = {classNames(styles.root, className)}>
             <ProviderTheme>
                 <Button onClick={switchTheme}>Change theme</Button>
-                <button className = {styles.orderBtn}>Order</button>
+                {/* <button className = {styles.orderBtn}>Order</button> */}
+                <div className = {styles.mainLogo}>
+                    <p>Antoine Karem</p>
+                </div>
             </ProviderTheme>
         </div>
     )

@@ -1,0 +1,20 @@
+.loadChild {
+    margin: 35vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 10px solid rgb(177, 177, 177);
+    opacity: 0.5;
+    border-left-color: rgb(100, 100, 100);
+    animation: loader 1.3s linear infinite;
+}
+
+
+@keyframes loader {
+    100% { 
+        transform: rotate(360deg); 
+    }
+  }

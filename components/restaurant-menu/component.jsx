@@ -1,12 +1,14 @@
 import styles from './styles.module.css'
 import { RestaurantDishContainer } from "../restaurant-dish/container"
 
-const RestaurantMenu = ({dishIds}) => {
+const RestaurantMenu = ({restaurant}) => {
+    if(!restaurant) return null
+
     return (
         <div>
             <h3 className = {styles.restaurantMenuHeader}>Menu</h3>
-            {dishIds.map((id) => (
-            <RestaurantDishContainer dishId = {id} positionOfDishes = {styles.positionOfDishes}
+            {restaurant.map((item) => (
+            <RestaurantDishContainer dishId = {item} positionOfDishes = {styles.positionOfDishes}
             positionOfDishName = {styles.positionOfDishName} positionOfDishesBorder = {styles.positionOfDishesBorder}/>
             ))}
         </div>

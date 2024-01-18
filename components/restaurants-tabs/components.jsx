@@ -3,12 +3,14 @@ import { selectRestaurants } from "../../redux/features/entities/restaurant/sele
 import { RestaurantTabContainer } from "../restaurant-tab/container"
 
 
-const RestaurantsTabs = ({ onTabClick }) => {
-    const restaurants = useSelector(selectRestaurants)
+const RestaurantsTabs = ({ onTabClick, restaurants }) => {
+
+    if(!restaurants) return null
+    
     return (
     <div>
-        {Object.values(restaurants).map(({id}) => (
-        <RestaurantTabContainer restaurantId = {id} onClick = {() => onTabClick(id)}/>
+        {restaurants.map(({id, name}) => (
+        <RestaurantTabContainer name = {name} onClick = {() => onTabClick(id)}/>
         ))}
     </div>)
 }
